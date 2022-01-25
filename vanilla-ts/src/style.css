@@ -1,8 +1,9 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,10 +13,12 @@
   font-size: 1.35rem;
   color: #000;
 }
-footer{
-  background: #9d6baa;
-  color: black;
+
+footer {
+  background: #333;
+  color: #000;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -25,6 +28,7 @@ form {
   padding: 1rem;
   margin: auto;
 }
+
 .inputs {
   padding: 0.7rem;
   text-align: center;
@@ -33,8 +37,9 @@ form {
   margin: auto auto 1rem auto;
   font-size: 1.1rem;
 }
-button{
-  background: #ae00ff;
+
+button {
+  background: #ff0aa6;
   padding: 0.5rem;
   font-weight: 600;
   font-size: 1.2rem;
@@ -43,3 +48,30 @@ button{
   box-shadow: 2px 3px 15px #000;
 }
 
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 1rem;
+  border: 2px solid #acacac;
+  margin: auto;
+}
+
+li h4,
+h1 {
+  color: #ff0aa7;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+li p {
+  color: #333;
+  margin: auto;
+}

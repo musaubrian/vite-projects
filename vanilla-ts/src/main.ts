@@ -15,13 +15,12 @@ const htmlInject = `
 
   <footer>
     <form class="new-item-form">
+
       <label for="type">Type: </label>
       <select id="type" class="inputs">
         <option value="invoice"> Invoice </option>
         <option value="payment"> Payment </option>
       </select>
-
-
 
       <label for="tofrom"> To/From: </label>
       <input type="text" name="tofrom" placeholder="Name" class="inputs"/>
@@ -30,11 +29,20 @@ const htmlInject = `
       <input type="text" name="details" placeholder=" Details" class="inputs"/>
 
       <label for="amount"> Amount ($):</label>
-      <input type="text" name="amount" placeholder=" $ " class="inputs"/>
+      <input type="text" name="amount" class="inputs"/>
       <button> Add </button>
       
     </form>
+    <a href="https://github.com">Github </a>
   </footer>
 `
 app.innerHTML = htmlInject
+
+//any type
+let age: any = 45;
+
+
+
+console.log(age)
+
 
