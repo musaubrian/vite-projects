@@ -38,11 +38,9 @@ const htmlInject = `
 `
 app.innerHTML = htmlInject
 
-//any type
-let age: any = 45;
+const anchor = document.querySelectorAll('a')
+console.log(anchor)
 
 
-
-console.log(age)
 
 
