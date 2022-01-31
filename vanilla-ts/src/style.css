@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background: #c0c0c0;
+}
 
 #app {
   font-family: 'Poppins';
@@ -11,11 +14,6 @@
   text-align: center;
   width: 100%;
   font-size: 1.35rem;
-  color: #000;
-}
-
-footer {
-  background: #333;
   color: #000;
 }
 
@@ -90,7 +88,7 @@ li {
 
 li h4,
 h1 {
-  color: #ff0aa7;
+  color: #c4057ee1;
   margin: 0;
   text-transform: capitalize;
 }
