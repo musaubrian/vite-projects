@@ -1,0 +1,1 @@
+export const helloInterface = console.log("From the interfaces directory");
