@@ -1,0 +1,1 @@
+export const invoice = console.log("logged to console from invoice")

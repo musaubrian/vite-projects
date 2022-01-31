@@ -1,5 +1,6 @@
-import { Invoice } from './Invoice';
 import './style.css'
+import { invoice } from './classes/invoice'
+import { helloInterface } from './interface/interface'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -13,15 +14,22 @@ const htmlInject = `
     </ul>
   
   </div>
+  <a class="waves-effect waves-dark btn modal-trigger" href="#modal">
+    <span class="material-icons">
+        add
+    </span>
+  </a>
 
-  <footer>
+  <div class="modal" id="modal">
     <form class="new-item-form">
-
-      <label for="type">Type: </label>
-      <select id="type" class="inputs">
-        <option value="invoice"> Invoice </option>
-        <option value="payment"> Payment </option>
-      </select>
+      <div class="input-field">
+        <select id="type" class="inputs select">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="invoice">Invoice</option>
+          <option value="payment">Payment</option>
+        </select>
+        <label>Type</label>
+      </div>      
 
       <label for="tofrom"> To/From: </label>
       <input type="text" name="tofrom" placeholder="Name" class="inputs" id="tofrom"/>
@@ -31,19 +39,13 @@ const htmlInject = `
 
       <label for="amount"> Amount ($):</label>
       <input type="text" name="amount" class="inputs" id="amount"/>
-      <button> Add </button>
-      
+      <button class="submit"> Add </button>
+
     </form>
-    <a href="https://github.com">Github </a>
-  </footer>
+  </div>
 `
 app.innerHTML = htmlInject
 
-const invOne = new Invoice('Mario', 'work on typescript', 250);
-let invoices: Invoice[] = [];
-invoices.push(invOne)
-
-console.log(invoices);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
@@ -62,6 +64,8 @@ form.addEventListener('submit', (e: Event) => {
     amount.valueAsNumber);
 })
 
+console.log(invoice);
+console.log(helloInterface);
 
 
 
