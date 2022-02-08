@@ -65,7 +65,8 @@ form.addEventListener('submit', (e: Event) => {
   //   amount.valueAsNumber);
 
   if (type.value == "invoice") {
-    const invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+    const invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    app.innerHTML += invOne;
     console.log(invOne)
   } else {
     const payOne = new Payment(tofrom.value, details.value, amount.valueAsNumber);
