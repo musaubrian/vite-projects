@@ -1,6 +1,7 @@
 import './style.css'
-import { invoice } from './classes/invoice'
-import { helloInterface } from './interface/interface'
+import { Invoice } from './classes/invoice'
+import { Payment } from './classes/payment'
+
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -9,7 +10,7 @@ const htmlInject = `
   <div class="wrapper">
     <h1>Finance Logger</h1>
 
-    <ul class="item list">
+    <ul class="item-list">
     
     </ul>
   
@@ -57,16 +58,20 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   
-  console.log(
-    type.value,
-    tofrom.value,
-    details.value,
-    amount.valueAsNumber);
+  // console.log(
+  //   type.value,
+  //   tofrom.value,
+  //   details.value,
+  //   amount.valueAsNumber);
+
+  if (type.value == "invoice") {
+    const invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+    console.log(invOne)
+  } else {
+    const payOne = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    console.log(payOne)
+  }
+  
 })
-
-console.log(invoice);
-console.log(helloInterface);
-
-
 
 

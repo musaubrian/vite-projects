@@ -1,6 +1,4 @@
-//classes
-
-export class Invoice {
+export class Payment {
     client: string;
     details: string;
     amount: number;
@@ -12,6 +10,6 @@ export class Invoice {
     }
 
     format(){
-        return `${this.client} owes $ ${this.amount} for ${this.details}`
+        return `${this.client} payed $ ${this.amount} for ${this.details}`
     }
 }
