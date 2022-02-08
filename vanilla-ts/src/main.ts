@@ -4,6 +4,7 @@ import { Payment } from './classes/payment'
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
+const ulAppend = document.querySelector<HTMLDListElement>('.item-list')!
 
 const htmlInject = `
 
@@ -66,7 +67,7 @@ form.addEventListener('submit', (e: Event) => {
 
   if (type.value == "invoice") {
     const invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
-    app.innerHTML += invOne;
+    ulAppend.innerHTML += invOne;
     console.log(invOne)
   } else {
     const payOne = new Payment(tofrom.value, details.value, amount.valueAsNumber);

@@ -12,6 +12,7 @@ export class Invoice {
     }
 
     format(){
-        return `<div> ${this.client} owes $ ${this.amount} for ${this.details} </div>`
+        return `
+            <li> ${this.client} owes $ ${this.amount} for ${this.details} </li>`
     }
 }
