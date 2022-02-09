@@ -3,16 +3,19 @@ export const htmlInject = `
   <div class="wrapper">
     <h1>Finance Logger</h1>
 
+
+    <a class="waves-effect waves-dark btn modal-trigger" href="#modal">
+      <span class="material-icons">
+          add
+      </span>
+    </a>
+
     <ul class="item-list">
     
     </ul>
   
   </div>
-  <a class="waves-effect waves-dark btn modal-trigger" href="#modal">
-    <span class="material-icons">
-        add
-    </span>
-  </a>
+  
 
   <div class="modal" id="modal">
     <form class="new-item-form">

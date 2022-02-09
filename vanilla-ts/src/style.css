@@ -8,7 +8,7 @@ body{
 }
 
 #app {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -82,8 +82,9 @@ ul {
 
 li {
   padding: 1rem;
-  border: 2px solid #acacac;
-  margin: auto;
+  margin: 1rem auto;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px #333;
 }
 
 li h4,
@@ -91,9 +92,11 @@ h1 {
   color: #c4057ee1;
   margin: 0;
   text-transform: capitalize;
+  font-weight: 650;
 }
 
 li p {
   color: #333;
   margin: auto;
+  font-weight: 510;
 }

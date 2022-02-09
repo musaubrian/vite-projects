@@ -1,9 +1,9 @@
 import './style.css'
-import { Invoice } from './classes/invoice'
-import { Payment } from './classes/payment'
-import { HasFormatter } from './interface/hasFormatter'
-import { ListTemplate } from './classes/listTemplate'
-import { htmlInject } from './html/htmlInject'
+import { Invoice } from './classes/invoice.js'
+import { Payment } from './classes/payment.js'
+import { HasFormatter } from './interface/hasFormatter.js'
+import { ListTemplate } from './classes/listTemplate.js'
+import { htmlInject } from './html/htmlInject.js'
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
@@ -32,7 +32,7 @@ form.addEventListener('submit', (e: Event) => {
     doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
   }
 
-  list.render(doc, tofrom.value, "start");
+  list.render(doc, type.value, "start");
   
 })
 
