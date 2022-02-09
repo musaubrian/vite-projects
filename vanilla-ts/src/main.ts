@@ -1,10 +1,10 @@
 import './style.css'
 import { Invoice } from './classes/invoice'
 import { Payment } from './classes/payment'
+import { HasFormatter } from './interface/hasFormatter'
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
-const wrapperAppend = document.querySelector<HTMLDivElement>('.wrapper')!
 
 const htmlInject = `
 
@@ -59,20 +59,15 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   
-  // console.log(
-  //   type.value,
-  //   tofrom.value,
-  //   details.value,
-  //   amount.valueAsNumber);
+  let doc: HasFormatter;
 
-  if (type.value == "invoice") {
-    const invOne = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
-    wrapperAppend.innerHTML += invOne;
-    console.log(invOne)
+  if (type.value === "invoice") {
+    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
   } else {
-    const payOne = new Payment(tofrom.value, details.value, amount.valueAsNumber);
-    console.log(payOne)
+    doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
   }
+
+  console.log(doc);
   
 })
 
